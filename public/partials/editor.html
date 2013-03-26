@@ -1,0 +1,23 @@
+<div>
+    <div ui-sortable ng-model="structure.widgets" id="editor" class='widget-container'>
+
+
+        <div data-ng-repeat="widget in structure.widgets">
+            <div data-widget></div>
+        </div>
+
+
+    </div>
+
+    <div class="btn-group">
+        <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+            Add widget
+            <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+            <li><a tabindex="-1" data-ng-click="addWidget({type: 'rich-text-widget'})">Rich Text</a></li>
+            <li><a tabindex="-1" data-ng-click="addWidget({type: 'video-widget'})">Video</a></li>
+        </ul>
+    </div>
+
+</div>

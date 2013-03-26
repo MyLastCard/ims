@@ -14,6 +14,10 @@
 		"url": "git://github.com/braitsch/node-login.git"
 	},
 	"private": true,
+    "devDependencies" : {
+        "grunt"   : "~0.3.17",
+        "nodemon" : "*"
+    },
 	"dependencies": {
 		"express": "3.0.6",
 		"stylus": "0.31.0",

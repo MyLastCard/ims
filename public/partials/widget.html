@@ -1,0 +1,20 @@
+<div class="widget widget-close widget-view">
+
+    <h3 class="widget-header"
+        role="tab"
+        aria-selected="true" tabindex="0">
+        <div class='widget-btn-bar'>
+            <a href='javascript:void(0)' data-ng-show="mode != 'edit'" data-ng-click="toggleMode()" onclick='return false' title='Edit'><i class="icon-pencil"></i></a>
+            <a href='javascript:void(0)'
+               title='Delete'
+               data-ng-click="removeWidgetByIdx($index)"><i class="icon-trash"></i>
+            </a>
+        </div>
+        <div class="widget-header-icon"></div>
+        <div data-ng-bind="widget.label || 'Untitled'" class="widget-header-title"></div>
+    </h3>
+
+
+    <div class="widget-content" role="tabpanel" style='display: none'></div>
+
+</div>

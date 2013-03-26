@@ -1,0 +1,40 @@
+<div>
+
+    <div data-ng-switch on="mode">
+        <div data-ng-switch-when="edit">
+
+
+            <form name="myForm" class="form-inline">
+
+                <div class="control-group">
+                    <label class="control-label">Label</label>
+
+                    <div class="controls">
+                        <input type="text"
+                               data-ng-model="editWidget.label"
+                               data-ng-required="true"
+                               class="input-xlarge"
+                                />
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <textarea data-wysihtml5 data-ng-model="editWidget.richtext" style='width: 98%; height: 260px'></textarea>
+                </div>
+
+                <button type='submit' data-ng-click="saveWidget()" data-ng-disabled="myForm.$invalid"
+                        class="btn btn-primary">Save changes
+                </button>
+                <button class="btn" data-ng-click="revertWidget()">Cancel</button>
+            </form>
+
+        </div>
+
+        <div ng-switch-default>
+            <div data-ng-bind-html-unsafe="widget.richtext || 'Empty'"></div>
+        </div>
+
+    </div>
+
+
+</div>
